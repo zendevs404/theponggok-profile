@@ -1,0 +1,393 @@
+/* css khusus untuk wisata */
+
+:root {
+    --primary: #86B817;
+    --primary-rgb: 134, 184, 23;
+    --secondary: #FE8800;
+    --secondary-rgb: 254, 136, 0;
+    --light: #F5F5F5;
+    --dark: #14141F;
+    --dark-rgb: 20, 20, 31;
+    --transition: all 0.5s ease;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,.08);
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} */
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.section.animate {
+    opacity: 1;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 600;
+    color: var(--dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    transition: var(--transition);   
+}
+
+a:hover{
+    color: var(--secondary);
+}
+
+.p-justify{
+    text-align: justify;
+}
+
+.section-padding{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* SECTION TITLE */
+.section-title{
+    margin-bottom: 60px;
+}
+
+.section-title .line{
+    width: 120px;
+    height: 4px;
+    background-color: var(--primary);
+    margin: 16px auto 24px;
+}
+
+.section-title p{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* NAVBAR */
+.navbar{
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link{
+    font-weight: 650;
+    color: var(--dark);
+}
+
+.navbar-nav .nav-link.active{
+    color: var(--primary);
+}
+
+.navbar-brand img{
+    max-height: 65px;
+}
+
+/* BUTTON */
+.btn{
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 35px;
+    padding: 10px 24px;
+}
+
+.btn-brand{
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.btn-brand:hover{
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+}
+
+/* IMAGE ZOOM */
+.image-zoom{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img{
+    transform: scale(1.1);
+}
+
+/* HERO */
+#hero{
+    background: linear-gradient(rgba(var(--dark-rgb),.3), rgba(var(--dark-rgb),.3)), url(../img/ponggok5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero h1{
+    text-shadow: 4px 2px 0px var(--dark), 7px 6px 0px rgba(255,255,255,0.15);
+    font-weight: 650;
+}
+
+/* PROFIL */
+#profil img{
+    box-shadow: 10px 10px 5px rgba(100,100,100,.3);
+}
+
+/* ICONBOX */
+.iconbox{
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--primary-rgb),.2);
+    color: var(--primary);
+    font-size: 34px;
+    flex: none;
+}
+
+/* PONGGOK */
+.card-body{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(217, 217, 217,.5);
+}
+
+.card{
+    width: 25rem;
+    border: none;
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: cover; 
+}
+
+/* KUNJUNGI */
+#kunjungi h3{
+    font-weight: 550;
+}
+
+#kunjungi{
+    position: relative;
+    z-index: 2;
+}
+
+#kunjungi::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(var(--dark-rgb),.8), rgba(var(--dark-rgb),.8)), url(../img/ponggok4.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#kunjungi .form-control{
+    border-radius: 15px;
+}
+
+#kunjungi .form-control:focus{
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+#map {
+    border-radius: 10px;
+    margin: auto;
+    width: 40vh;
+    height: 50vh;
+}
+
+.text-map{
+    width: 40vh;
+    margin: auto;
+}
+
+/* FOOTER */
+footer{
+    padding-top: 120px;
+}
+
+.footer-top{
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer-bottom{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+footer li,
+footer p,
+footer a{
+    color: rgba(255, 255, 255, .7);
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer .line{
+    width: 40px;
+    height: 4px;
+    background-color: var(--primary);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+footer .footer-top .container h5.title_foot{
+    color: var(--light);
+}
+
+footer .footer-top .container ul li a:hover{
+    color: var(--primary);
+}
+
+.social-icons a{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover{
+    background-color: var(--primary);
+    color: white;
+}
+
+.social-icons i{
+    font-size: 23px;
+}
+
+/* SIGEDHANG */
+/* HERO */
+#hero-gedhang{
+    background: linear-gradient(rgba(var(--dark-rgb),.5), rgba(var(--dark-rgb),.4)), url(../img/Gedhang/sigedang1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-gedhang h1{
+    text-shadow: 4px 2px 0px var(--dark), 7px 6px 0px rgba(255,255,255,0.15);
+    font-weight: 650;
+}
+
+#gedhang h3{
+    font-weight: 550;
+}
+
+#kunjungi-gedhang{
+    position: relative;
+    z-index: 2;
+}
+
+#kunjungi-gedhang::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(var(--dark-rgb),.8), rgba(var(--dark-rgb),.8)), url(../img/Gedhang/sigedang2.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#kunjungi-gedhang .form-control{
+    border-radius: 15px;
+}
+
+#kunjungi-gedhang .form-control:focus{
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+/* BESUKI */
+/* HERO */
+#hero-besuki{
+    background: linear-gradient(rgba(var(--dark-rgb),.5), rgba(var(--dark-rgb),.4)), url(../img/Besuki/besuki1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero-besuki h1{
+    text-shadow: 4px 2px 0px var(--dark), 7px 6px 0px rgba(255,255,255,0.15);
+    font-weight: 650;
+}
+
+#besuki h3{
+    font-weight: 550;
+}
+
+#kunjungi-besuki{
+    position: relative;
+    z-index: 2;
+}
+
+#kunjungi-besuki::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(var(--dark-rgb),.8), rgba(var(--dark-rgb),.8)), url(../img/Besuki/besuki3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#kunjungi-besuki .form-control{
+    border-radius: 15px;
+}
+
+#kunjungi-besuki .form-control:focus{
+    box-shadow: none;
+    border-color: var(--primary);
+}
+
+@media (max-width:728px){
+    .navbar-brand img{
+        max-height: 45px;
+    }
+}
+
+@media (max-width:500px){
+    .navbar-brand img{
+        max-height: 40px;
+    }
+}
