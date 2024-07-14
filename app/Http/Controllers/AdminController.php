@@ -63,6 +63,11 @@ class AdminController extends Controller
         return view('admin.show_product', compact('product'));
      }
 
+     public function show_event(){
+        $event=event::all();
+        return view('admin.show_event', compact('event'));
+     }
+
      public function delete_product($id){
         $product=product::find($id);
         $product->delete();
@@ -73,6 +78,18 @@ class AdminController extends Controller
      public function update_product($id){
         $product=product::find($id);
         return view('admin.update_product', compact('product'));
+     }
+
+     public function delete_event($id){
+        $event=event::find($id);
+        $event->delete();
+
+        return redirect()->back()->with('message', 'Event Deleted Successfully!');
+     }
+
+     public function update_event($id){
+        $event=event::find($id);
+        return view('admin.update_event', compact('event'));
      }
 
      public function update_product_confirm(Request $request,$id){
