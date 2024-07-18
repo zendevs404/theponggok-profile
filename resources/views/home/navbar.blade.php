@@ -46,14 +46,14 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                         <h1 class="display-3 text-white mb-3 animated slideInDown">Selamat Datang di Desa Ponggok</h1>
-                        <p class="fs-4 text-white mb-4 animated slideInDown">Desa Wisata Air Bunaken Van Java</p>
+                        <p class="fs-4 text-white mb-4 animated slideInDown">Desa yang terkenal dengan wisata air</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <style>
+<style>
     .custom-btn {
         padding: 10px 20px;
         font-size: 14px;
