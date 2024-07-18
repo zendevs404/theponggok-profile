@@ -100,4 +100,22 @@ class AdminController extends Controller
         $product->save();
         return redirect()->back();
     }
+    public function update_event_confirm(Request $request, $id) {
+        $event = Event::find($id);
+
+        $event->title = $request->title;
+        $event->description = $request->description;
+
+        $image = $request->image;
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            $request->image->move('event', $imagename);
+            $event->image = $imagename;
+        }
+        
+        $event->date = $request->date;
+
+        $event->save();
+        return redirect()->back();
+    }
 }

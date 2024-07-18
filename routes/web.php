@@ -29,5 +29,6 @@ Route::get('/delete_event/{id}', [AdminController::class, 'delete_event']);
 Route::get('/update_product/{id}', [AdminController::class, 'update_product']);
 Route::get('/update_event/{id}', [AdminController::class, 'update_event']);
 Route::post('/update_product_confirm/{id}', [AdminController::class, 'update_product_confirm']);
+Route::post('/update_event_confirm/{id}', [AdminController::class, 'update_event_confirm']);        
 Route::post('/add_comment', [HomeController::class, 'add_comment']);
 Route::post('/add_reply', [HomeController::class, 'add_reply']);
