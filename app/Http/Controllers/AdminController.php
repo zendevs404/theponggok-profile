@@ -73,10 +73,20 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Product Deleted Successfully!');
      }
+     public function delete_event($id){
+        $event=Event::find($id);
+        $event->delete();
+
+        return redirect()->back()->with('message', 'Event Deleted Successfully!');
+     }
 
      public function update_product($id){
         $product=product::find($id);
         return view('admin.update_product', compact('product'));
+     }
+     public function update_event($id){
+        $event=Event::find($id);
+        return view('admin.update_event', compact('event'));
      }
 
      public function update_product_confirm(Request $request,$id){
@@ -96,6 +106,29 @@ class AdminController extends Controller
         }
         
             $product->save();
+
+            return redirect()->back();
+     }
+     public function update_event_confirm(Request $request,$id){
+        $event=Event::find($id);
+
+        $event->title=$request->title;
+        $event->description=$request->description;
+
+        $image=$request->image;
+
+        if($image){
+            $imagename=time().'.'.$image->getClientOriginalExtension();
+
+            $request->image->move('event', $imagename);
+    
+                $event->image=$imagename;
+        }
+
+        $event->date=$request->date;
+        $event->location=$request->location;
+        
+            $event->save();
 
             return redirect()->back();
      }

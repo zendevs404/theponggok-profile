@@ -77,7 +77,7 @@
                     <td>{{$event->location}}</td>
                     <td>{{$event->date}}</td>
                     <td>
-                        <img class="img_size" src="/product/{{$event->image}}" alt="">
+                        <img class="img_size" src="/event/{{$event->image}}" alt="">
                     </td>
 
                     <td>
