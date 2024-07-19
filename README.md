@@ -32,8 +32,8 @@ The Ponggok Village backend application is designed to manage and streamline var
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/ponggok-village-backend.git
-    cd ponggok-village-backend
+    git clone https://github.com/zendevs404/theponggok-profile.git
+    cd theponggok-profile
     ```
 
 2. **Install Dependencies**:
