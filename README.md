@@ -25,7 +25,7 @@ The Ponggok Village backend application is designed to manage and streamline var
 | MySQL      | Database management system |
 | Laravel Sanctum | Authentication package for Laravel |
 | RESTful API| API design for frontend integration |
-| PHPUnit    | Testing framework for PHP |
+| PHPUnit    | PHPUnit is for Testing PHPframework |
 | Laravel Dusk | Browser testing and automation |
 
 ## Getting Started
